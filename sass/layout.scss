@@ -43,18 +43,29 @@ nav {
 main {
     width: 90%;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 2.6rem;
     display: flex;
     justify-content: space-between;
 
     .left {
         width: 42%;
-
         img {
-            max-width: 100%;
+            width: 350px;
+            height: 350px;
             height: auto;
             border: 0 solid transparent;
             border-radius: 1rem;
+            margin-bottom: 1rem;
+        }
+        .thumnail-container{
+            display: flex;
+            flex-wrap: nowrap;
+            column-gap: 1rem;
+
+            img{
+                width: 75px;
+                height: 75px;
+            }
         }
     }
 
@@ -78,19 +89,20 @@ main {
 
         p {
             color: var(--vark-blue);
-            margin-bottom: 1rem;
+            margin-bottom: 1.3rem;
             font-size: 15px;
         }
 
         .discount {
+            display: flex;
             font-weight: 800;
             font-size: 18px;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.4rem;
 
-            span {
-                margin-left: 0.6rem;
+            .percent {
+                margin-left: 0.8rem;
                 font-size: 13px;
-                padding: 0.1rem 0.3rem;
+                padding: 0.1rem 0.4rem;
                 color: var(--orange);
                 background-color: var(--pale-orange);
                 border-radius: 0.2rem;
@@ -101,7 +113,7 @@ main {
             font-size: 13px;
             color: rgb(145, 145, 145);
             text-decoration: line-through;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .card {
@@ -120,12 +132,19 @@ main {
                     padding: 0 1rem;
                 }
                 input[type="number"]{
-                    text-align: end;
+                    text-align: center;
                     font-size: 1rem;
                     border: none;
                     outline: none;
                     background-color: var(--light-gray-blue);
                     width: 50%;
+                }
+                #decrement{
+                    padding-bottom: 0.5rem;
+                    border-radius: 0.8rem 0 0 0.8rem;
+                }
+                #increment{
+                    border-radius: 0 0.8rem 0.8rem 0;
                 }
             }
 
@@ -141,6 +160,10 @@ main {
                 background-color: var(--orange);
                 border-radius: 0.4rem;
                 outline: none;
+
+                .filter-white{
+                    filter: invert(100%) sepia(99%) saturate(1%) hue-rotate(154deg) brightness(104%) contrast(100%);
+                }
             }
         }
     }

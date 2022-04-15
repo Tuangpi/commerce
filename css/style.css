@@ -59,7 +59,7 @@ nav div img {
 main {
   width: 90%;
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 2.6rem;
   display: flex;
   justify-content: space-between;
 }
@@ -67,10 +67,21 @@ main .left {
   width: 42%;
 }
 main .left img {
-  max-width: 100%;
+  width: 350px;
+  height: 350px;
   height: auto;
   border: 0 solid transparent;
   border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+main .left .thumnail-container {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 1rem;
+}
+main .left .thumnail-container img {
+  width: 75px;
+  height: 75px;
 }
 main .right {
   width: 47%;
@@ -90,18 +101,19 @@ main .right h1 {
 }
 main .right p {
   color: var(--vark-blue);
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
   font-size: 15px;
 }
 main .right .discount {
+  display: flex;
   font-weight: 800;
   font-size: 18px;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
 }
-main .right .discount span {
-  margin-left: 0.6rem;
+main .right .discount .percent {
+  margin-left: 0.8rem;
   font-size: 13px;
-  padding: 0.1rem 0.3rem;
+  padding: 0.1rem 0.4rem;
   color: var(--orange);
   background-color: var(--pale-orange);
   border-radius: 0.2rem;
@@ -110,7 +122,7 @@ main .right .real-price {
   font-size: 13px;
   color: #919191;
   text-decoration: line-through;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 main .right .card {
   display: flex;
@@ -129,12 +141,19 @@ main .right .card .number-container .btn {
   padding: 0 1rem;
 }
 main .right .card .number-container input[type=number] {
-  text-align: end;
+  text-align: center;
   font-size: 1rem;
   border: none;
   outline: none;
   background-color: var(--light-gray-blue);
   width: 50%;
+}
+main .right .card .number-container #decrement {
+  padding-bottom: 0.5rem;
+  border-radius: 0.8rem 0 0 0.8rem;
+}
+main .right .card .number-container #increment {
+  border-radius: 0 0.8rem 0.8rem 0;
 }
 main .right .card #add-cart {
   display: flex;
@@ -148,6 +167,9 @@ main .right .card #add-cart {
   background-color: var(--orange);
   border-radius: 0.4rem;
   outline: none;
+}
+main .right .card #add-cart .filter-white {
+  filter: invert(100%) sepia(99%) saturate(1%) hue-rotate(154deg) brightness(104%) contrast(100%);
 }
 
 /*# sourceMappingURL=style.css.map */
