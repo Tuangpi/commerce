@@ -69,19 +69,26 @@ main .left {
 main .left img {
   width: 350px;
   height: 350px;
-  height: auto;
-  border: 0 solid transparent;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 main .left .thumnail-container {
   display: flex;
   flex-wrap: nowrap;
   column-gap: 1rem;
+  position: relative;
 }
 main .left .thumnail-container img {
   width: 75px;
   height: 75px;
+  cursor: pointer;
+}
+main .left .thumnail-container :hover {
+  background-color: white;
+  border: 0.2rem solid var(--orange);
+  margin-top: -0.1rem;
+  opacity: 0.5;
 }
 main .right {
   width: 47%;
@@ -170,6 +177,30 @@ main .right .card #add-cart {
 }
 main .right .card #add-cart .filter-white {
   filter: invert(100%) sepia(99%) saturate(1%) hue-rotate(154deg) brightness(104%) contrast(100%);
+}
+
+.black-screen {
+  display: none;
+}
+
+.black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  opacity: 1;
+  display: block;
+}
+
+.black-container {
+  display: flex;
+  flex-direction: column;
+}
+.black-container img {
+  width: 30%;
+  height: 30%;
 }
 
 /*# sourceMappingURL=style.css.map */
