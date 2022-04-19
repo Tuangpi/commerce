@@ -160,6 +160,7 @@ main .right .card #add-cart .filter-white {
 }
 
 .black-screen {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -170,22 +171,26 @@ main .right .card #add-cart .filter-white {
 }
 
 .black-container {
+  display: none;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 30%;
-  margin-top: 6rem;
-  display: flex;
+  margin-top: 4rem;
   flex-direction: column;
 }
 .black-container .close {
+  display: none;
   margin-left: auto;
+  padding: 0.5rem 0 0.5rem 1rem;
   filter: invert(79%) sepia(52%) saturate(6974%) hue-rotate(348deg) brightness(102%) contrast(101%);
+  cursor: pointer;
 }
 .black-container .black-image {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+  display: none;
 }
 .black-container .black-image img {
   width: 100%;
@@ -193,7 +198,7 @@ main .right .card #add-cart .filter-white {
   border-radius: 1rem;
 }
 .black-container .black-thumnail-container {
-  display: flex;
+  display: none;
   column-gap: 1rem;
   justify-content: center;
 }
@@ -207,6 +212,14 @@ main .right .card #add-cart .filter-white {
   border: 0.2rem solid var(--orange);
   margin-top: -0.1rem;
   opacity: 0.5;
+}
+
+.black {
+  display: block !important;
+}
+
+.black-flex {
+  display: flex !important;
 }
 
 /*# sourceMappingURL=layout.css.map */
