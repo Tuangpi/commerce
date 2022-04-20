@@ -76,6 +76,12 @@ main {
                 margin-top: -0.1rem;
                 opacity: 0.5;
             }
+            .default{
+                background-color: var(--white);
+                border: 0.2rem solid var(--orange);
+                margin-top: -0.1rem;
+                opacity: 0.5;
+            }
         }
     }
 
@@ -208,19 +214,46 @@ main {
         display: none;
         margin-left: auto;
         padding: 0.5rem 0 0.5rem 1rem;
-        filter: invert(79%) sepia(52%) saturate(6974%) hue-rotate(348deg) brightness(102%) contrast(101%);
         cursor: pointer;
+        filter: invert(79%) sepia(52%) saturate(6974%) hue-rotate(348deg) brightness(102%) contrast(101%);
     }
 
     .black-image {
         width: 100%;
         margin-bottom: 0.8rem;
         display: none;
+        align-items: center;
+
+        .previous,
+        .next {
+            position: absolute;
+            background-color: var(--white);
+            width: 2.8rem;
+            height: 2.8rem;
+            top: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+
+            svg {
+                filter: invert(79%) sepia(52%) saturate(6974%) hue-rotate(348deg) brightness(102%) contrast(101%);
+            }
+        }
 
         img {
             width: 100%;
             height: 60vh;
             border-radius: 1rem;
+        }
+
+        .previous {
+            left: -1.6rem;
+        }
+
+        .next {
+            right: -1.8rem;
         }
     }
 
@@ -234,6 +267,7 @@ main {
             border-radius: 1rem;
             cursor: pointer;
         }
+
         :hover {
             background-color: var(--white);
             border: 0.2rem solid var(--orange);
@@ -242,9 +276,15 @@ main {
         }
     }
 }
-.black{
+
+.black {
     display: block !important;
 }
-.black-flex{
+
+.black-flex {
     display: flex !important;
+}
+
+.hide {
+    display: none;
 }
